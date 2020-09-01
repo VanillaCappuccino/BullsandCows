@@ -18,7 +18,7 @@ class EasyComputerTableViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HardComputerCell", for: indexPath) as! EasyComputerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EasyComputerCell", for: indexPath) as! EasyComputerTableViewCell
         
         cell.numbers.text = "\(data[indexPath.row][0])"
         cell.bulls.text = "\(data[indexPath.row][1])"
@@ -31,6 +31,21 @@ class EasyComputerTableViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadComputerTable), name: NSNotification.Name(rawValue: "EasyButtonClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(restartTable), name: NSNotification.Name(rawValue: "EasyGameOver"), object: nil)
+    }
+    
+    @objc func reloadComputerTable()
+    {
+        data = EasyPredictionsData.ComputerData
+        tableView.reloadData()
+    }
+    
+    @objc func restartTable()
+    {
+        EasyPredictionsData.ComputerData = []
+        data = EasyPredictionsData.ComputerData
+        tableView.reloadData()
     }
 
 }

@@ -32,6 +32,21 @@ class HardPlayerTableViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPlayerTable), name: NSNotification.Name(rawValue: "HardButtonClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(restartTable), name: NSNotification.Name(rawValue: "HardGameOver"), object: nil)
+    }
+    
+    @objc func reloadPlayerTable()
+    {
+        data = HardPredictionsData.PlayerData
+        tableView.reloadData()
+    }
+    
+    @objc func restartTable()
+    {
+        HardPredictionsData.PlayerData = []
+        data = HardPredictionsData.PlayerData
+        tableView.reloadData()
     }
 
 }

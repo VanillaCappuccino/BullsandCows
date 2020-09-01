@@ -32,7 +32,22 @@ class EasyPlayerTableViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPlayerTable), name: NSNotification.Name(rawValue: "EasyButtonClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(restartTable), name: NSNotification.Name(rawValue: "EasyGameOver"), object: nil)
         
+    }
+    
+    @objc func reloadPlayerTable()
+    {
+        data = EasyPredictionsData.PlayerData
+        tableView.reloadData()
+    }
+    
+    @objc func restartTable()
+    {
+        EasyPredictionsData.PlayerData = []
+        data = EasyPredictionsData.PlayerData
+        tableView.reloadData()
     }
 
 }

@@ -28,6 +28,10 @@ class PracticeViewController: UIViewController {
         NumberEntryField.configure()
         StatusLabel.text = "Turn: \(turnCount)"
         bullsCowsCounter.text = "Bulls: 0, Cows: 0"
+        let practiceBeginAlert = UIAlertController(title: "Practice Mode", message: "This is the Practice mode. You can work on your guessing skills here!", preferredStyle: .alert)
+        practiceBeginAlert.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: nil))
+        self.present(practiceBeginAlert, animated: true)
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         NotificationCenter.default.addObserver(self, selector: #selector(restartPractice), name: NSNotification.Name(rawValue: "PracticeGameOver"), object: nil )
     }
     
@@ -36,6 +40,16 @@ class PracticeViewController: UIViewController {
     lazy var tbGuessed = CompConds.randnum(space: space)
     lazy var turnCount = 1
     lazy var predicted: [Int] = []
+    
+    @IBAction func restartButton(_ sender: UIButton, forEvent event: UIEvent) {
+        restartPractice()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PracticeGameOver"), object: nil)
+        let practiceRestart = UIAlertController(title: "Restart: Practice", message: "The game has been restarted.", preferredStyle: .alert)
+        practiceRestart.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: nil))
+        self.present(practiceRestart, animated: true)
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    }
+    
     
     @IBAction func predictButton(_ sender: UIButton, forEvent event: UIEvent)
     {
@@ -64,6 +78,7 @@ class PracticeViewController: UIViewController {
         }
         else
         {
+            NumberEntryField.clear()
             StatusLabel.text = "Invalid prediction, please try again."
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }

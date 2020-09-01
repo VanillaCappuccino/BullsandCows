@@ -39,9 +39,9 @@ class ProcessedNumber
     func compare(origin:Int,numbers:inout[Int],plus:Int,minus:Int) -> [Int]
     {
         let origin_arr: [Int] = extract(numb:origin)
-        for m in numbers
+        for num in numbers
         {
-            let temp:[Int] = extract(numb:m)
+            let temp:[Int] = extract(numb:num)
             var p = 0
             var m = 0
             for i in 0..<temp.count
@@ -61,13 +61,51 @@ class ProcessedNumber
             
             if p != plus || m != minus
             {
-                numbers.removeFirst(m)
+                let ind = numbers.firstIndex(of: num)!
+                numbers.remove(at: ind)
             }
         }
 
         return numbers
     }
 
+    //------------------------------------------------------------------------------
+    
+    func easyCompare(origin:Int,numbers:inout[Int],plus:Int,minus:Int) -> [Int]
+    {
+        let origin_arr: [Int] = extract(numb:origin)
+        var turner: Int = 0
+        for num in numbers
+        {
+            let temp:[Int] = extract(numb:num)
+            var p = 0
+            var m = 0
+            for i in 0..<temp.count
+            {
+                if temp[i] == origin_arr[i]
+                {
+                    p += 1
+                }
+                else if origin_arr.contains(temp[i])
+                {
+                    if temp.firstIndex(of: origin_arr[i]) != i
+                    {
+                        m += 1
+                    }
+                }
+            }
+            turner += 1
+            
+            if (p != plus || m != minus) && turner % 4 != 0
+            {
+                let ind = numbers.firstIndex(of: num)!
+                numbers.remove(at: ind)
+            }
+        }
+
+        return numbers
+    }
+    
     //------------------------------------------------------------------------------
 
     func condcheck(numb:Int,mode:Int) -> Bool
