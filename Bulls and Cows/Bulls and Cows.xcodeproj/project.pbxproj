@@ -14,6 +14,20 @@
 		BB53BEFB24FCF04F00CE01A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB53BEFA24FCF04F00CE01A2 /* Assets.xcassets */; };
 		BB53BEFE24FCF04F00CE01A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB53BEFC24FCF04F00CE01A2 /* LaunchScreen.storyboard */; };
 		BBB4E5D924FD04E6005843C5 /* EasyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5D824FD04E6005843C5 /* EasyViewController.swift */; };
+		BBB4E5DB24FD18AB005843C5 /* HardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5DA24FD18AB005843C5 /* HardViewController.swift */; };
+		BBB4E5DD24FD1DBB005843C5 /* ProcessedNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5DC24FD1DBB005843C5 /* ProcessedNumber.swift */; };
+		BBB4E5DF24FD2CF2005843C5 /* HardPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5DE24FD2CF2005843C5 /* HardPlayerTableViewController.swift */; };
+		BBB4E5E124FD315B005843C5 /* PCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5E024FD315B005843C5 /* PCTableViewCell.swift */; };
+		BBB4E5E424FD38D9005843C5 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5E324FD38D9005843C5 /* PracticeViewController.swift */; };
+		BBB4E5E724FD3CFC005843C5 /* HardComputerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5E624FD3CFC005843C5 /* HardComputerTableViewController.swift */; };
+		BBB4E5E924FD3D11005843C5 /* CompTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5E824FD3D11005843C5 /* CompTableViewCell.swift */; };
+		BBB4E5ED24FD417A005843C5 /* EasyPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5EC24FD417A005843C5 /* EasyPlayerTableViewController.swift */; };
+		BBB4E5F124FD41BA005843C5 /* EasyPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F024FD41BA005843C5 /* EasyPlayerTableViewCell.swift */; };
+		BBB4E5F324FD41D2005843C5 /* EasyComputerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F224FD41D2005843C5 /* EasyComputerTableViewCell.swift */; };
+		BBB4E5F524FD41F5005843C5 /* EasyComputerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F424FD41F5005843C5 /* EasyComputerTableViewController.swift */; };
+		BBB4E5F824FD4BAC005843C5 /* PracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F724FD4BAC005843C5 /* PracticeTableViewController.swift */; };
+		BBB4E5FA24FD4BBE005843C5 /* PracticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F924FD4BBE005843C5 /* PracticeTableViewCell.swift */; };
+		BBB4E5FE24FD8731005843C5 /* OneTimeNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5FD24FD8731005843C5 /* OneTimeNumberField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +40,20 @@
 		BB53BEFD24FCF04F00CE01A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB53BEFF24FCF04F00CE01A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBB4E5D824FD04E6005843C5 /* EasyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyViewController.swift; sourceTree = "<group>"; };
+		BBB4E5DA24FD18AB005843C5 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
+		BBB4E5DC24FD1DBB005843C5 /* ProcessedNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessedNumber.swift; sourceTree = "<group>"; };
+		BBB4E5DE24FD2CF2005843C5 /* HardPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardPlayerTableViewController.swift; sourceTree = "<group>"; };
+		BBB4E5E024FD315B005843C5 /* PCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCTableViewCell.swift; sourceTree = "<group>"; };
+		BBB4E5E324FD38D9005843C5 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		BBB4E5E624FD3CFC005843C5 /* HardComputerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardComputerTableViewController.swift; sourceTree = "<group>"; };
+		BBB4E5E824FD3D11005843C5 /* CompTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompTableViewCell.swift; sourceTree = "<group>"; };
+		BBB4E5EC24FD417A005843C5 /* EasyPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyPlayerTableViewController.swift; sourceTree = "<group>"; };
+		BBB4E5F024FD41BA005843C5 /* EasyPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		BBB4E5F224FD41D2005843C5 /* EasyComputerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyComputerTableViewCell.swift; sourceTree = "<group>"; };
+		BBB4E5F424FD41F5005843C5 /* EasyComputerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyComputerTableViewController.swift; sourceTree = "<group>"; };
+		BBB4E5F724FD4BAC005843C5 /* PracticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewController.swift; sourceTree = "<group>"; };
+		BBB4E5F924FD4BBE005843C5 /* PracticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewCell.swift; sourceTree = "<group>"; };
+		BBB4E5FD24FD8731005843C5 /* OneTimeNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeNumberField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,11 @@
 		BB53BEF024FCEFE000CE01A2 /* Bulls and Cows */ = {
 			isa = PBXGroup;
 			children = (
+				BBB4E5F624FD4B96005843C5 /* Practice Table */,
+				BBB4E5EB24FD4149005843C5 /* Easy Computer Table */,
+				BBB4E5EA24FD413D005843C5 /* Easy Player Table */,
+				BBB4E5E524FD3CDB005843C5 /* Hard Computer Table */,
+				BBB4E5E224FD38A2005843C5 /* Hard Player Table */,
 				BB53BEF124FCEFE000CE01A2 /* AppDelegate.swift */,
 				BB53BEF324FCEFE000CE01A2 /* SceneDelegate.swift */,
 				BB53BEF524FCEFE000CE01A2 /* ViewController.swift */,
@@ -65,9 +98,58 @@
 				BB53BEFA24FCF04F00CE01A2 /* Assets.xcassets */,
 				BB53BEFC24FCF04F00CE01A2 /* LaunchScreen.storyboard */,
 				BB53BEFF24FCF04F00CE01A2 /* Info.plist */,
+				BBB4E5DA24FD18AB005843C5 /* HardViewController.swift */,
 				BBB4E5D824FD04E6005843C5 /* EasyViewController.swift */,
+				BBB4E5E324FD38D9005843C5 /* PracticeViewController.swift */,
+				BBB4E5DC24FD1DBB005843C5 /* ProcessedNumber.swift */,
+				BBB4E5FD24FD8731005843C5 /* OneTimeNumberField.swift */,
 			);
 			path = "Bulls and Cows";
+			sourceTree = "<group>";
+		};
+		BBB4E5E224FD38A2005843C5 /* Hard Player Table */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4E5DE24FD2CF2005843C5 /* HardPlayerTableViewController.swift */,
+				BBB4E5E024FD315B005843C5 /* PCTableViewCell.swift */,
+			);
+			path = "Hard Player Table";
+			sourceTree = "<group>";
+		};
+		BBB4E5E524FD3CDB005843C5 /* Hard Computer Table */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4E5E624FD3CFC005843C5 /* HardComputerTableViewController.swift */,
+				BBB4E5E824FD3D11005843C5 /* CompTableViewCell.swift */,
+			);
+			path = "Hard Computer Table";
+			sourceTree = "<group>";
+		};
+		BBB4E5EA24FD413D005843C5 /* Easy Player Table */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4E5EC24FD417A005843C5 /* EasyPlayerTableViewController.swift */,
+				BBB4E5F024FD41BA005843C5 /* EasyPlayerTableViewCell.swift */,
+			);
+			path = "Easy Player Table";
+			sourceTree = "<group>";
+		};
+		BBB4E5EB24FD4149005843C5 /* Easy Computer Table */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4E5F224FD41D2005843C5 /* EasyComputerTableViewCell.swift */,
+				BBB4E5F424FD41F5005843C5 /* EasyComputerTableViewController.swift */,
+			);
+			path = "Easy Computer Table";
+			sourceTree = "<group>";
+		};
+		BBB4E5F624FD4B96005843C5 /* Practice Table */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4E5F724FD4BAC005843C5 /* PracticeTableViewController.swift */,
+				BBB4E5F924FD4BBE005843C5 /* PracticeTableViewCell.swift */,
+			);
+			path = "Practice Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +223,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB4E5ED24FD417A005843C5 /* EasyPlayerTableViewController.swift in Sources */,
+				BBB4E5F124FD41BA005843C5 /* EasyPlayerTableViewCell.swift in Sources */,
 				BBB4E5D924FD04E6005843C5 /* EasyViewController.swift in Sources */,
+				BBB4E5F524FD41F5005843C5 /* EasyComputerTableViewController.swift in Sources */,
+				BBB4E5FA24FD4BBE005843C5 /* PracticeTableViewCell.swift in Sources */,
+				BBB4E5DD24FD1DBB005843C5 /* ProcessedNumber.swift in Sources */,
+				BBB4E5F324FD41D2005843C5 /* EasyComputerTableViewCell.swift in Sources */,
+				BBB4E5E924FD3D11005843C5 /* CompTableViewCell.swift in Sources */,
 				BB53BEF624FCEFE000CE01A2 /* ViewController.swift in Sources */,
+				BBB4E5FE24FD8731005843C5 /* OneTimeNumberField.swift in Sources */,
+				BBB4E5E424FD38D9005843C5 /* PracticeViewController.swift in Sources */,
 				BB53BEF224FCEFE000CE01A2 /* AppDelegate.swift in Sources */,
+				BBB4E5F824FD4BAC005843C5 /* PracticeTableViewController.swift in Sources */,
+				BBB4E5DF24FD2CF2005843C5 /* HardPlayerTableViewController.swift in Sources */,
+				BBB4E5DB24FD18AB005843C5 /* HardViewController.swift in Sources */,
+				BBB4E5E724FD3CFC005843C5 /* HardComputerTableViewController.swift in Sources */,
+				BBB4E5E124FD315B005843C5 /* PCTableViewCell.swift in Sources */,
 				BB53BEF424FCEFE000CE01A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

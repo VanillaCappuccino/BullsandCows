@@ -8,13 +8,22 @@
 
 import UIKit
 
+struct EasyPredictionsData
+{
+    static var PlayerData: [[Int]] = []
+    static var ComputerData: [[Int]] = []
+}
+
 class EasyViewController: UIViewController {
 
     @IBOutlet weak var EasyPlayerTable: UIView!
     @IBOutlet weak var EasyComputerTable: UIView!
+    @IBOutlet weak var NumberEntryField: OneTimeNumberField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NumberEntryField.configure()
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func easyTablesSwitch(_ sender: UISegmentedControl, forEvent event: UIEvent) {

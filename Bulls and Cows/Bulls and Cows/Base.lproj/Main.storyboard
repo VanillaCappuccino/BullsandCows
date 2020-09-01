@@ -32,7 +32,7 @@
         <!--Practice-->
         <scene sceneID="fqk-ed-VYa">
             <objects>
-                <viewController id="680-qG-myt" sceneMemberID="viewController">
+                <viewController id="680-qG-myt" customClass="PracticeViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yY7-2w-Gtl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,19 +49,102 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Od-5h-cGw">
+                                <rect key="frame" x="157.5" y="203.5" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.25082373973390071" green="0.3526072114506647" blue="0.37371315387299819" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5cP-P5-7h6"/>
+                                    <constraint firstAttribute="height" constant="30" id="7ez-m8-6fl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="TcA-5q-dxu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="wGn-05-awa"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Predict">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="15" name="AmericanTypewriter-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="predictButton:forEvent:" destination="680-qG-myt" eventType="touchUpInside" id="aEe-UF-STD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ru-B0-1Kv">
+                                <rect key="frame" x="128" y="243.5" width="119" height="23.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Status Label">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="AmericanTypewriter-Semibold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKV-Zf-LfX">
+                                <rect key="frame" x="91" y="277" width="193" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bulls and Cows Counter">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AmericanTypewriter"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-xh-DyA">
+                                <rect key="frame" x="20" y="348" width="335" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="OGv-dC-7Q7"/>
+                                    <constraint firstAttribute="height" constant="250" id="pAa-6k-72a"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="9dM-cs-yb5" kind="embed" id="R4L-fW-dVC"/>
+                                </connections>
+                            </containerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="zt8-wE-fdv" customClass="OneTimeNumberField" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="118.5" width="150" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="eq6-hy-tAM"/>
+                                    <constraint firstAttribute="width" constant="150" id="gf1-u4-VKE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="40I-7P-YgD" firstAttribute="top" secondItem="ydi-KI-o0C" secondAttribute="top" constant="20" id="BQu-kI-4lg"/>
-                            <constraint firstItem="40I-7P-YgD" firstAttribute="leading" secondItem="ydi-KI-o0C" secondAttribute="leading" constant="20" id="dbC-FS-HiR"/>
+                            <constraint firstItem="YRM-xh-DyA" firstAttribute="leading" secondItem="ydi-KI-o0C" secondAttribute="leading" constant="20" id="5P5-fY-noI"/>
+                            <constraint firstItem="ydi-KI-o0C" firstAttribute="trailing" secondItem="YRM-xh-DyA" secondAttribute="trailing" constant="20" id="7ce-2L-G6m"/>
+                            <constraint firstItem="40I-7P-YgD" firstAttribute="top" secondItem="ydi-KI-o0C" secondAttribute="top" constant="20" id="GOP-3s-92W"/>
+                            <constraint firstItem="WKV-Zf-LfX" firstAttribute="centerX" secondItem="ydi-KI-o0C" secondAttribute="centerX" id="Lct-US-7cX"/>
+                            <constraint firstItem="8Od-5h-cGw" firstAttribute="top" secondItem="zt8-wE-fdv" secondAttribute="bottom" constant="20" id="LxV-1x-6K1"/>
+                            <constraint firstItem="8Od-5h-cGw" firstAttribute="centerX" secondItem="ydi-KI-o0C" secondAttribute="centerX" id="OaK-Fu-akw"/>
+                            <constraint firstItem="40I-7P-YgD" firstAttribute="leading" secondItem="ydi-KI-o0C" secondAttribute="leading" constant="20" id="XT4-rF-ega"/>
+                            <constraint firstItem="ydi-KI-o0C" firstAttribute="bottom" secondItem="YRM-xh-DyA" secondAttribute="bottom" constant="20" id="Y3g-oM-SIn"/>
+                            <constraint firstItem="WKV-Zf-LfX" firstAttribute="top" secondItem="0ru-B0-1Kv" secondAttribute="bottom" constant="10" id="gUZ-Sp-fgC"/>
+                            <constraint firstItem="zt8-wE-fdv" firstAttribute="centerX" secondItem="ydi-KI-o0C" secondAttribute="centerX" id="h4i-sa-DyY"/>
+                            <constraint firstItem="0ru-B0-1Kv" firstAttribute="centerX" secondItem="ydi-KI-o0C" secondAttribute="centerX" id="j7e-pv-FVN"/>
+                            <constraint firstItem="YRM-xh-DyA" firstAttribute="top" secondItem="WKV-Zf-LfX" secondAttribute="bottom" constant="51" id="oaY-1W-4OC"/>
+                            <constraint firstItem="0ru-B0-1Kv" firstAttribute="top" secondItem="8Od-5h-cGw" secondAttribute="bottom" constant="10" id="olZ-Yu-lKQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ydi-KI-o0C"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Practice" image="repeat" catalog="system" id="fhc-bE-ISV"/>
+                    <connections>
+                        <outlet property="NumberEntryField" destination="zt8-wE-fdv" id="hab-au-uN3"/>
+                        <outlet property="PracticePlayerTable" destination="YRM-xh-DyA" id="DKK-c2-vp5"/>
+                        <outlet property="StatusLabel" destination="0ru-B0-1Kv" id="ZVr-HH-Lcf"/>
+                        <outlet property="bullsCowsCounter" destination="WKV-Zf-LfX" id="FKW-PQ-HSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9YB-ct-5jR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="2050"/>
+            <point key="canvasLocation" x="660" y="2109"/>
         </scene>
         <!--Easy-->
         <scene sceneID="kCE-6o-ZK2">
@@ -82,8 +165,9 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-eB-1qz">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-eB-1qz">
                                 <rect key="frame" x="20" y="348" width="335" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="oF3-x3-UVR" kind="embed" id="afc-dN-0yu"/>
                                 </connections>
@@ -132,7 +216,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sn5-37-9ql">
-                                <rect key="frame" x="157.5" y="203.5" width="60" height="30"/>
+                                <rect key="frame" x="157.5" y="203" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.28627450980000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2sd-eT-f8b"/>
@@ -150,7 +234,7 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-EN-gQ9">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-EN-gQ9">
                                 <rect key="frame" x="157.5" y="203" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.28627450980000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -171,32 +255,36 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-eA-5QI" customClass="OneTimeNumberField" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="118" width="150" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="CMi-2g-HNK"/>
+                                    <constraint firstAttribute="width" constant="150" id="gnl-rV-jay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vxW-oz-42W" firstAttribute="trailing" secondItem="Fkr-kd-8Bd" secondAttribute="trailing" constant="20" id="04Z-Au-70d"/>
-                            <constraint firstItem="ib4-EN-gQ9" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="2gM-21-FJr"/>
-                            <constraint firstItem="Ak0-kr-Rur" firstAttribute="top" secondItem="XfJ-JB-qlR" secondAttribute="bottom" constant="10" id="3Nh-aV-tgc"/>
-                            <constraint firstItem="vxW-oz-42W" firstAttribute="bottom" secondItem="Fkr-kd-8Bd" secondAttribute="bottom" constant="20" id="6VG-qd-G9z"/>
-                            <constraint firstItem="Ak0-kr-Rur" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="786-QH-Rcq"/>
-                            <constraint firstItem="XfJ-JB-qlR" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="9l5-5Z-QGt"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="Cit-Jl-7gz"/>
-                            <constraint firstItem="Fkr-kd-8Bd" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="CjH-05-tlA"/>
-                            <constraint firstItem="TLc-tA-e1l" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="Gak-hp-UzN"/>
-                            <constraint firstItem="TLc-tA-e1l" firstAttribute="top" secondItem="sn5-37-9ql" secondAttribute="bottom" constant="10" id="Guk-Hq-sEt"/>
-                            <constraint firstItem="vxW-oz-42W" firstAttribute="bottom" secondItem="CQz-eB-1qz" secondAttribute="bottom" constant="20" id="QPd-bP-Jer"/>
-                            <constraint firstItem="hUJ-Iz-9Fd" firstAttribute="top" secondItem="vxW-oz-42W" secondAttribute="top" constant="20" id="UfT-py-fO0"/>
-                            <constraint firstItem="Fkr-kd-8Bd" firstAttribute="leading" secondItem="vxW-oz-42W" secondAttribute="leading" constant="20" id="UkD-jz-R7Z"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="centerY" secondItem="Fkr-kd-8Bd" secondAttribute="centerY" id="gnn-i5-IiQ"/>
-                            <constraint firstItem="sn5-37-9ql" firstAttribute="centerX" secondItem="xGT-WH-IxM" secondAttribute="centerX" id="hKj-uK-TYR"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="centerX" secondItem="Fkr-kd-8Bd" secondAttribute="centerX" id="hXc-KJ-45V"/>
-                            <constraint firstItem="hUJ-Iz-9Fd" firstAttribute="leading" secondItem="vxW-oz-42W" secondAttribute="leading" constant="20" id="kMh-q5-Amg"/>
-                            <constraint firstItem="vxW-oz-42W" firstAttribute="trailing" secondItem="CQz-eB-1qz" secondAttribute="trailing" constant="20" id="nUt-JY-oFf"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="height" secondItem="Fkr-kd-8Bd" secondAttribute="height" id="qIV-HZ-fzj"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="width" secondItem="Fkr-kd-8Bd" secondAttribute="width" id="thJ-rs-XEU"/>
-                            <constraint firstItem="XfJ-JB-qlR" firstAttribute="top" secondItem="TLc-tA-e1l" secondAttribute="bottom" constant="10" id="wgS-CR-yI3"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="top" secondItem="Ak0-kr-Rur" secondAttribute="bottom" constant="10" id="wtI-rF-U7d"/>
-                            <constraint firstItem="CQz-eB-1qz" firstAttribute="leading" secondItem="vxW-oz-42W" secondAttribute="leading" constant="20" id="zFN-4G-lyk"/>
+                            <constraint firstItem="XfJ-JB-qlR" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="3k7-bv-fb5"/>
+                            <constraint firstItem="vxW-oz-42W" firstAttribute="trailing" secondItem="Fkr-kd-8Bd" secondAttribute="trailing" constant="20" id="6ww-t2-90C"/>
+                            <constraint firstItem="sn5-37-9ql" firstAttribute="top" secondItem="QVB-eA-5QI" secondAttribute="bottom" constant="20" id="CXW-7U-hJj"/>
+                            <constraint firstItem="TLc-tA-e1l" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="GFB-Z8-8nG"/>
+                            <constraint firstItem="vxW-oz-42W" firstAttribute="bottom" secondItem="Fkr-kd-8Bd" secondAttribute="bottom" constant="20" id="Gqm-Ix-W36"/>
+                            <constraint firstItem="hUJ-Iz-9Fd" firstAttribute="leading" secondItem="vxW-oz-42W" secondAttribute="leading" constant="20" id="LRR-up-l8y"/>
+                            <constraint firstItem="QVB-eA-5QI" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="O0M-9O-PLe"/>
+                            <constraint firstItem="sn5-37-9ql" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="O5p-9k-tyY"/>
+                            <constraint firstItem="TLc-tA-e1l" firstAttribute="top" secondItem="ib4-EN-gQ9" secondAttribute="bottom" constant="10.5" id="QBk-Lf-UZr"/>
+                            <constraint firstItem="Ak0-kr-Rur" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="QFZ-Kz-I26"/>
+                            <constraint firstItem="Fkr-kd-8Bd" firstAttribute="top" secondItem="Ak0-kr-Rur" secondAttribute="bottom" constant="10" id="W8m-rN-Wa1"/>
+                            <constraint firstItem="Ak0-kr-Rur" firstAttribute="top" secondItem="XfJ-JB-qlR" secondAttribute="bottom" constant="10" id="cH0-I9-Ioa"/>
+                            <constraint firstItem="ib4-EN-gQ9" firstAttribute="centerX" secondItem="vxW-oz-42W" secondAttribute="centerX" id="ih0-nh-hZ8"/>
+                            <constraint firstItem="hUJ-Iz-9Fd" firstAttribute="top" secondItem="vxW-oz-42W" secondAttribute="top" constant="20" id="jqI-EC-oYS"/>
+                            <constraint firstItem="XfJ-JB-qlR" firstAttribute="top" secondItem="TLc-tA-e1l" secondAttribute="bottom" constant="10" id="kJs-5T-3rf"/>
+                            <constraint firstItem="TLc-tA-e1l" firstAttribute="top" secondItem="sn5-37-9ql" secondAttribute="bottom" constant="10.5" id="w8Z-t7-Y8X"/>
+                            <constraint firstItem="Fkr-kd-8Bd" firstAttribute="leading" secondItem="vxW-oz-42W" secondAttribute="leading" constant="20" id="y00-ql-wk7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vxW-oz-42W"/>
                     </view>
@@ -204,6 +292,7 @@
                     <connections>
                         <outlet property="EasyComputerTable" destination="CQz-eB-1qz" id="yJh-yk-y7p"/>
                         <outlet property="EasyPlayerTable" destination="Fkr-kd-8Bd" id="f5Z-yJ-672"/>
+                        <outlet property="NumberEntryField" destination="QVB-eA-5QI" id="Brd-Iv-j5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCU-72-YYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,7 +302,7 @@
         <!--Hard-->
         <scene sceneID="YHf-J3-apE">
             <objects>
-                <viewController title="Hard" id="f1s-64-72g" sceneMemberID="viewController">
+                <viewController title="Hard" id="f1s-64-72g" customClass="HardViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1R9-U2-3SK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,19 +319,146 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kC-ZP-ItC">
+                                <rect key="frame" x="20" y="348" width="335" height="250"/>
+                                <connections>
+                                    <segue destination="vhr-if-vXo" kind="embed" id="aVI-EK-yBb"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRU-nr-V1v">
+                                <rect key="frame" x="20" y="348" width="335" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="0f5-7f-ak4"/>
+                                    <constraint firstAttribute="width" constant="335" id="ie9-NA-QC0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="y9l-hR-1NM" kind="embed" id="D8E-hg-1Uf"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UyC-M2-o6f">
+                                <rect key="frame" x="145" y="307" width="85" height="32"/>
+                                <segments>
+                                    <segment title="" image="person.fill" catalog="system"/>
+                                    <segment title="" image="desktopcomputer" catalog="system"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.46219956870000001" green="0.05160668492" blue="0.0068451855330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="HardTablesSwitch:forEvent:" destination="f1s-64-72g" eventType="valueChanged" id="deY-a4-UF7"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liR-IR-5DV">
+                                <rect key="frame" x="91" y="277" width="193" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bulls and Cows Counter">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AmericanTypewriter"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-WY-yF5">
+                                <rect key="frame" x="128" y="243.5" width="119" height="23.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Status Label">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="AmericanTypewriter-Semibold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uie-jb-rX6">
+                                <rect key="frame" x="157.5" y="203.5" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.46219956870000001" green="0.05160668492" blue="0.0068451855330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="N8C-Ea-q6n"/>
+                                    <constraint firstAttribute="height" constant="30" id="zFz-DC-iPT"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Store">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="15" name="AmericanTypewriter-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FrB-nJ-6lK">
+                                <rect key="frame" x="157.5" y="203.5" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.050980392156862744" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9IL-J7-2jc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cMu-Zc-bYW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="doV-ht-9Ja"/>
+                                    <constraint firstAttribute="height" constant="30" id="eXh-4B-auQ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Predict">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="15" name="AmericanTypewriter-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-hB-4QP" customClass="OneTimeNumberField" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="118.5" width="150" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8cd-IX-DTs"/>
+                                    <constraint firstAttribute="height" constant="65" id="MWd-oU-71y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Fga-hB-4QP" firstAttribute="centerX" secondItem="G1u-QM-wun" secondAttribute="centerX" id="0g2-nk-VHn"/>
+                            <constraint firstItem="AOW-WY-yF5" firstAttribute="top" secondItem="uie-jb-rX6" secondAttribute="bottom" constant="10" id="0to-o5-wqh"/>
+                            <constraint firstItem="9kC-ZP-ItC" firstAttribute="top" secondItem="UyC-M2-o6f" secondAttribute="bottom" constant="10" id="42c-gJ-8Op"/>
+                            <constraint firstItem="liR-IR-5DV" firstAttribute="top" secondItem="AOW-WY-yF5" secondAttribute="bottom" constant="10" id="ATq-yV-c7F"/>
+                            <constraint firstItem="uie-jb-rX6" firstAttribute="top" secondItem="Fga-hB-4QP" secondAttribute="bottom" constant="20" id="DCh-Gb-w9F"/>
+                            <constraint firstItem="UyC-M2-o6f" firstAttribute="top" secondItem="liR-IR-5DV" secondAttribute="bottom" constant="10" id="HNJ-9O-Mbk"/>
+                            <constraint firstItem="UyC-M2-o6f" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="Jva-U4-jdQ"/>
+                            <constraint firstItem="hRU-nr-V1v" firstAttribute="height" secondItem="9kC-ZP-ItC" secondAttribute="height" id="K7U-q2-bhf"/>
+                            <constraint firstItem="hRU-nr-V1v" firstAttribute="centerX" secondItem="9kC-ZP-ItC" secondAttribute="centerX" id="L3L-Tw-lO1"/>
+                            <constraint firstItem="FrB-nJ-6lK" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="NsE-Gf-nlh"/>
+                            <constraint firstItem="UyC-M2-o6f" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="Pdd-PT-XEK"/>
+                            <constraint firstItem="G1u-QM-wun" firstAttribute="bottom" secondItem="hRU-nr-V1v" secondAttribute="bottom" constant="20" id="RSd-mg-nzl"/>
+                            <constraint firstItem="AOW-WY-yF5" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="Uhq-dT-iRC"/>
+                            <constraint firstItem="hRU-nr-V1v" firstAttribute="width" secondItem="9kC-ZP-ItC" secondAttribute="width" id="W5S-Cr-c97"/>
+                            <constraint firstItem="AOW-WY-yF5" firstAttribute="top" secondItem="FrB-nJ-6lK" secondAttribute="bottom" constant="10" id="dmP-mj-BXF"/>
                             <constraint firstItem="8iq-Am-YTQ" firstAttribute="top" secondItem="G1u-QM-wun" secondAttribute="top" constant="20" id="e1Y-jL-ctX"/>
+                            <constraint firstItem="hRU-nr-V1v" firstAttribute="centerY" secondItem="9kC-ZP-ItC" secondAttribute="centerY" id="hqh-Mh-uHu"/>
+                            <constraint firstItem="G1u-QM-wun" firstAttribute="trailing" secondItem="hRU-nr-V1v" secondAttribute="trailing" constant="20" id="ivI-Ed-FFm"/>
+                            <constraint firstItem="G1u-QM-wun" firstAttribute="bottom" secondItem="9kC-ZP-ItC" secondAttribute="bottom" constant="20" id="jzu-hf-uvd"/>
+                            <constraint firstItem="uie-jb-rX6" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="q1m-UK-lHA"/>
+                            <constraint firstItem="liR-IR-5DV" firstAttribute="centerX" secondItem="1R9-U2-3SK" secondAttribute="centerX" id="q2H-FL-v6D"/>
                             <constraint firstItem="8iq-Am-YTQ" firstAttribute="leading" secondItem="G1u-QM-wun" secondAttribute="leading" constant="20" id="r0E-fZ-3WR"/>
+                            <constraint firstItem="9kC-ZP-ItC" firstAttribute="leading" secondItem="G1u-QM-wun" secondAttribute="leading" constant="20" id="tOF-g4-q82"/>
+                            <constraint firstItem="hRU-nr-V1v" firstAttribute="leading" secondItem="G1u-QM-wun" secondAttribute="leading" constant="20" id="v7p-g7-BOE"/>
+                            <constraint firstItem="G1u-QM-wun" firstAttribute="trailing" secondItem="9kC-ZP-ItC" secondAttribute="trailing" constant="20" id="yyA-RP-Vzg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G1u-QM-wun"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hard" image="exclamationmark.triangle" catalog="system" id="xqc-aO-t0j"/>
+                    <connections>
+                        <outlet property="HardComputerTable" destination="9kC-ZP-ItC" id="Cpt-jF-B9e"/>
+                        <outlet property="HardNumberField" destination="Fga-hB-4QP" id="ajG-e2-PsB"/>
+                        <outlet property="HardPlayerTable" destination="hRU-nr-V1v" id="RfF-Ou-HLa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qN4-S8-ndd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="1381"/>
+            <point key="canvasLocation" x="1536.8" y="1380.3598200899551"/>
         </scene>
         <!--How to Play?-->
         <scene sceneID="Vwy-oT-eGb">
@@ -265,13 +481,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-I8-FWF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-I8-FWF">
                                 <rect key="frame" x="176" y="392" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-C8-KuY">
-                                <rect key="frame" x="20" y="255" width="374" height="303"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-C8-KuY">
+                                <rect key="frame" x="20" y="157.5" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="303" id="oVs-zh-F4a"/>
                                     <constraint firstAttribute="width" constant="374" id="sjC-xt-3mV"/>
@@ -281,7 +498,7 @@
                                         <string key="content">Bulls and Cows is a game where a side tries to guess a number with unique digits before the other side does. The players put in their guesses, one after the other. The number of bulls indicate the number of  digits in the right place, and the cows those in the wrong place. Try and compete against the computer to see if you can beat an exhaustive algorithm, or sharpen your guessing skills with the Practice Mode!</string>
                                         <attributes>
                                             <font key="NSFont" size="20" name="AmericanTypewriter-Semibold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -290,14 +507,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sDi-C8-KuY" firstAttribute="centerY" secondItem="A93-Vw-JWf" secondAttribute="centerY" id="6Lt-Q6-ecz"/>
-                            <constraint firstItem="qIg-I8-FWF" firstAttribute="centerX" secondItem="A93-Vw-JWf" secondAttribute="centerX" id="Dzm-GJ-IFr"/>
                             <constraint firstItem="ck0-uH-DEU" firstAttribute="leading" secondItem="A93-Vw-JWf" secondAttribute="leading" constant="20" id="Fpl-x9-3cC"/>
+                            <constraint firstItem="sDi-C8-KuY" firstAttribute="leading" secondItem="A93-Vw-JWf" secondAttribute="leading" constant="20" id="H1c-ZA-7gd"/>
                             <constraint firstItem="ck0-uH-DEU" firstAttribute="top" secondItem="A93-Vw-JWf" secondAttribute="top" constant="20" id="IS1-h5-75L"/>
-                            <constraint firstItem="sDi-C8-KuY" firstAttribute="centerX" secondItem="A93-Vw-JWf" secondAttribute="centerX" id="PDv-Zv-aVU"/>
-                            <constraint firstItem="qIg-I8-FWF" firstAttribute="centerY" secondItem="A93-Vw-JWf" secondAttribute="centerY" id="eIy-zH-CY0"/>
-                            <constraint firstItem="A93-Vw-JWf" firstAttribute="trailing" secondItem="sDi-C8-KuY" secondAttribute="trailing" constant="20" id="iSa-nz-ZN8"/>
-                            <constraint firstItem="sDi-C8-KuY" firstAttribute="leading" secondItem="A93-Vw-JWf" secondAttribute="leading" constant="20" id="zaS-dD-Ora"/>
+                            <constraint firstItem="A93-Vw-JWf" firstAttribute="trailing" secondItem="sDi-C8-KuY" secondAttribute="trailing" constant="20" id="OZy-Lc-IJD"/>
+                            <constraint firstItem="sDi-C8-KuY" firstAttribute="centerX" secondItem="8Ys-J0-0CZ" secondAttribute="centerX" id="er0-ag-T0S"/>
+                            <constraint firstItem="sDi-C8-KuY" firstAttribute="centerY" secondItem="A93-Vw-JWf" secondAttribute="centerY" id="gfA-bg-WPB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A93-Vw-JWf"/>
                     </view>
@@ -307,37 +522,679 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuV-SH-RJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660.86956521739137" y="729.91071428571422"/>
+            <point key="canvasLocation" x="660" y="729.08545727136436"/>
         </scene>
         <!--ComputerTableVC-->
         <scene sceneID="aeb-vm-2ET">
             <objects>
-                <viewController title="ComputerTableVC" id="oF3-x3-UVR" sceneMemberID="viewController">
+                <viewController title="ComputerTableVC" id="oF3-x3-UVR" customClass="EasyComputerTableViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhl-IF-7Zl">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-mD-xNp">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="Xzx-pJ-dnG">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyW-HH-JHB">
+                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Number">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI3-ek-Jeq">
+                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Bulls">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-ii-QzE">
+                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Cows">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EasyComputerCell" id="KQn-B7-FIR" customClass="EasyComputerTableViewCell" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KQn-B7-FIR" id="aL0-F8-dts">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="hAG-c6-OiH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84V-o9-o1o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUV-vM-dYN">
+                                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-6c-GhR">
+                                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bulls" destination="BUV-vM-dYN" id="Y39-8X-JdK"/>
+                                            <outlet property="cows" destination="cZr-6c-GhR" id="pfX-Uq-5UA"/>
+                                            <outlet property="numbers" destination="84V-o9-o1o" id="a6p-OK-Zhm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.28627450980392155" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WJo-mD-xNp" firstAttribute="centerX" secondItem="Cb6-UN-9pV" secondAttribute="centerX" id="BX6-3c-thF"/>
+                            <constraint firstItem="WJo-mD-xNp" firstAttribute="centerY" secondItem="Cb6-UN-9pV" secondAttribute="centerY" id="fwc-ov-GCQ"/>
+                            <constraint firstItem="WJo-mD-xNp" firstAttribute="width" secondItem="mhl-IF-7Zl" secondAttribute="width" id="mmE-ya-EqS"/>
+                            <constraint firstItem="WJo-mD-xNp" firstAttribute="height" secondItem="mhl-IF-7Zl" secondAttribute="height" id="qi8-eK-2Rh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cb6-UN-9pV"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="WJo-mD-xNp" id="9Ec-id-oXW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLh-IE-4JN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="901"/>
+            <point key="canvasLocation" x="2269.5999999999999" y="900.44977511244383"/>
         </scene>
         <!--PlayerTableVC-->
         <scene sceneID="TKL-c5-Bzt">
             <objects>
-                <viewController title="PlayerTableVC" id="dEA-bu-oWa" sceneMemberID="viewController">
+                <viewController title="PlayerTableVC" id="dEA-bu-oWa" customClass="EasyPlayerTableViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="geM-FP-X6a">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-6o-Sdw">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="vyY-eI-MN4">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUw-tC-eAX">
+                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Number">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-N2-vNN">
+                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Bulls">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aee-ez-qSL">
+                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Cows">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EasyPlayerCell" id="qez-lY-Tm0" customClass="EasyPlayerTableViewCell" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qez-lY-Tm0" id="Z7l-qM-HIM">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="LRi-hT-Zx4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXo-BR-Ngu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-Pg-h0W">
+                                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vj-d1-Uub">
+                                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bulls" destination="5ck-Pg-h0W" id="huT-xN-4E8"/>
+                                            <outlet property="cows" destination="0vj-d1-Uub" id="1wK-zd-yT9"/>
+                                            <outlet property="number" destination="TXo-BR-Ngu" id="wYi-uz-cBJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.28627450980392155" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SLw-6o-Sdw" firstAttribute="height" secondItem="geM-FP-X6a" secondAttribute="height" id="DxX-vy-Zny"/>
+                            <constraint firstItem="SLw-6o-Sdw" firstAttribute="width" secondItem="geM-FP-X6a" secondAttribute="width" id="aWr-IG-Mh9"/>
+                            <constraint firstItem="SLw-6o-Sdw" firstAttribute="centerX" secondItem="hBQ-TE-Wqu" secondAttribute="centerX" id="uFb-cD-ey6"/>
+                            <constraint firstItem="SLw-6o-Sdw" firstAttribute="centerY" secondItem="hBQ-TE-Wqu" secondAttribute="centerY" id="umj-cB-rcJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hBQ-TE-Wqu"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SLw-6o-Sdw" id="LPh-KI-gby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4k-t7-p1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269.5652173913045" y="626.78571428571422"/>
+            <point key="canvasLocation" x="2268" y="625.18740629685158"/>
+        </scene>
+        <!--ComputerTableVC-->
+        <scene sceneID="GhX-t6-SCE">
+            <objects>
+                <viewController title="ComputerTableVC" id="vhr-if-vXo" customClass="HardComputerTableViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vaw-5Y-Gkq">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ep-Q7-4MM">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="Ai2-wy-T7Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaZ-xa-axz">
+                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Number">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcX-LX-rQZ">
+                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Bulls">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjg-le-YOP">
+                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Cows">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HardComputerCell" id="Adr-bR-f9j" customClass="CompTableViewCell" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Adr-bR-f9j" id="cOr-nQ-B7j">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="bYW-eU-903">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKq-sb-JvE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-iN-K7J">
+                                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-pG-daR">
+                                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bulls" destination="vjw-iN-K7J" id="lCg-hG-OA3"/>
+                                            <outlet property="cows" destination="GLW-pG-daR" id="uwQ-DL-2qQ"/>
+                                            <outlet property="number" destination="nKq-sb-JvE" id="Nma-nz-6R9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.050980392156862744" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6ep-Q7-4MM" firstAttribute="centerY" secondItem="Vaw-5Y-Gkq" secondAttribute="centerY" id="6dK-12-XiO"/>
+                            <constraint firstItem="6ep-Q7-4MM" firstAttribute="height" secondItem="Vaw-5Y-Gkq" secondAttribute="height" id="AaO-z9-TNT"/>
+                            <constraint firstItem="6ep-Q7-4MM" firstAttribute="centerX" secondItem="Vaw-5Y-Gkq" secondAttribute="centerX" id="kbb-Sz-CLo"/>
+                            <constraint firstItem="6ep-Q7-4MM" firstAttribute="width" secondItem="Vaw-5Y-Gkq" secondAttribute="width" id="oMO-WT-4ff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6ep-Q7-4MM" id="Qxp-Ul-OYX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPl-Tf-uB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="1273"/>
+        </scene>
+        <!--PlayerTableVC-->
+        <scene sceneID="Mjw-lK-DhF">
+            <objects>
+                <viewController title="PlayerTableVC" id="y9l-hR-1NM" customClass="HardPlayerTableViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHf-fX-HRd">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JPb-d6-dnf">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="j4z-0s-w3t">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdt-rw-Tbx">
+                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Number">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d41-Hl-bbs">
+                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Bulls">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-YH-NOa">
+                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Cows">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HardPlayerCell" id="ie6-Uf-9d1" customClass="PCTableViewCell" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ie6-Uf-9d1" id="vet-E9-ca5">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="cIg-C8-JeE">
+                                                    <rect key="frame" x="0.0" y="-1" width="335" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZG-3t-dPk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-dE-o9A">
+                                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XN-Oc-1h4">
+                                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bulls" destination="Rtf-dE-o9A" id="86q-iA-s2i"/>
+                                            <outlet property="cows" destination="5XN-Oc-1h4" id="rjz-Fq-rrb"/>
+                                            <outlet property="number" destination="gZG-3t-dPk" id="LxB-mg-s8A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.050980392156862744" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JPb-d6-dnf" firstAttribute="height" secondItem="bHf-fX-HRd" secondAttribute="height" id="C6d-SC-mwL"/>
+                            <constraint firstItem="JPb-d6-dnf" firstAttribute="centerX" secondItem="bHf-fX-HRd" secondAttribute="centerX" id="Fap-Lj-42M"/>
+                            <constraint firstItem="JPb-d6-dnf" firstAttribute="centerY" secondItem="bHf-fX-HRd" secondAttribute="centerY" id="dZI-uU-XyH"/>
+                            <constraint firstItem="JPb-d6-dnf" firstAttribute="width" secondItem="bHf-fX-HRd" secondAttribute="width" id="ycK-Lj-4Ma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JPb-d6-dnf" id="9ze-6j-KJh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcm-UM-mKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="1598"/>
+        </scene>
+        <!--Practice Table View Controller-->
+        <scene sceneID="Qnn-G1-cQ3">
+            <objects>
+                <viewController id="9dM-cs-yb5" customClass="PracticeTableViewController" customModule="Bulls_and_Cows" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k7d-TC-Y9G">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ma-eB-1xm">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="EKI-mG-r3V">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WH-fh-WEr">
+                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Number">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-1M-wCe">
+                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Bulls">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-sB-Pce">
+                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Cows">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PracticePlayerCell" id="f5Q-Hr-3B0" customClass="PracticeTableViewCell" customModule="Bulls_and_Cows" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f5Q-Hr-3B0" id="5Fw-r6-29f">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" id="BOl-KL-FGG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0a-K6-ORf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gt-Af-UhF">
+                                                            <rect key="frame" x="128.5" y="0.0" width="78" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyl-IY-s9a">
+                                                            <rect key="frame" x="256.5" y="0.0" width="78.5" height="44"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="AmericanTypewriter"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bulls" destination="1Gt-Af-UhF" id="odC-GJ-KMW"/>
+                                            <outlet property="cows" destination="Nyl-IY-s9a" id="zuX-Ie-wwe"/>
+                                            <outlet property="number" destination="B0a-K6-ORf" id="U8m-ut-16N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25082373969999999" green="0.35260721150000002" blue="0.37371315389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4ma-eB-1xm" firstAttribute="centerY" secondItem="k7d-TC-Y9G" secondAttribute="centerY" id="Gom-bS-fgR"/>
+                            <constraint firstItem="4ma-eB-1xm" firstAttribute="height" secondItem="k7d-TC-Y9G" secondAttribute="height" id="INH-YU-Vl8"/>
+                            <constraint firstItem="4ma-eB-1xm" firstAttribute="width" secondItem="k7d-TC-Y9G" secondAttribute="width" id="SHF-VE-847"/>
+                            <constraint firstItem="4ma-eB-1xm" firstAttribute="centerX" secondItem="k7d-TC-Y9G" secondAttribute="centerX" id="XmG-Nx-Wv5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4ma-eB-1xm" id="DBH-ux-Nay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfU-c2-LTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="2296.5517241379312"/>
         </scene>
     </scenes>
     <resources>
