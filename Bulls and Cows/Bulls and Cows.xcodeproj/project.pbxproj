@@ -28,6 +28,7 @@
 		BBB4E5F824FD4BAC005843C5 /* PracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F724FD4BAC005843C5 /* PracticeTableViewController.swift */; };
 		BBB4E5FA24FD4BBE005843C5 /* PracticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5F924FD4BBE005843C5 /* PracticeTableViewCell.swift */; };
 		BBB4E5FE24FD8731005843C5 /* OneTimeNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB4E5FD24FD8731005843C5 /* OneTimeNumberField.swift */; };
+		BBF6667524FFE84F0038F0BB /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF6667424FFE84F0038F0BB /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BBB4E5F724FD4BAC005843C5 /* PracticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewController.swift; sourceTree = "<group>"; };
 		BBB4E5F924FD4BBE005843C5 /* PracticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewCell.swift; sourceTree = "<group>"; };
 		BBB4E5FD24FD8731005843C5 /* OneTimeNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeNumberField.swift; sourceTree = "<group>"; };
+		BBF6667424FFE84F0038F0BB /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +88,12 @@
 		BB53BEF024FCEFE000CE01A2 /* Bulls and Cows */ = {
 			isa = PBXGroup;
 			children = (
+				BBF6667424FFE84F0038F0BB /* iPadStoryboard.storyboard */,
 				BBB4E5F624FD4B96005843C5 /* Practice Table */,
 				BBB4E5EB24FD4149005843C5 /* Easy Computer Table */,
 				BBB4E5EA24FD413D005843C5 /* Easy Player Table */,
 				BBB4E5E524FD3CDB005843C5 /* Hard Computer Table */,
 				BBB4E5E224FD38A2005843C5 /* Hard Player Table */,
-				BB53BEF124FCEFE000CE01A2 /* AppDelegate.swift */,
 				BB53BEF324FCEFE000CE01A2 /* SceneDelegate.swift */,
 				BB53BEF524FCEFE000CE01A2 /* ViewController.swift */,
 				BB53BEF724FCEFE000CE01A2 /* Main.storyboard */,
@@ -110,6 +112,7 @@
 		BBB4E5E224FD38A2005843C5 /* Hard Player Table */ = {
 			isa = PBXGroup;
 			children = (
+				BB53BEF124FCEFE000CE01A2 /* AppDelegate.swift */,
 				BBB4E5DE24FD2CF2005843C5 /* HardPlayerTableViewController.swift */,
 				BBB4E5E024FD315B005843C5 /* PCTableViewCell.swift */,
 			);
@@ -213,6 +216,7 @@
 				BB53BEFE24FCF04F00CE01A2 /* LaunchScreen.storyboard in Resources */,
 				BB53BEFB24FCF04F00CE01A2 /* Assets.xcassets in Resources */,
 				BB53BEF924FCEFE000CE01A2 /* Main.storyboard in Resources */,
+				BBF6667524FFE84F0038F0BB /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +391,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BFAVQQ67P;
 				INFOPLIST_FILE = "Bulls and Cows/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BFAVQQ67P;
 				INFOPLIST_FILE = "Bulls and Cows/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

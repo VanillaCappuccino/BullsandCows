@@ -33,7 +33,7 @@ class HardViewController: UIViewController {
         HardNumberField.configure()
         StoreButton.alpha = 1
         PredictButton.alpha = 0
-        StatusLabel.text = "Turn:\(turnCount)"
+        StatusLabel.text = "Turn: \(turnCount)"
         bullsCowsCounter.text = "Bulls: 0, Cows: 0"
         let hardBeginAlert = UIAlertController(title: "Difficulty: Hard", message: "Please enter the number with four unique digits you would like the computer to try to guess.", preferredStyle: .alert)
         hardBeginAlert.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: nil))
@@ -173,13 +173,17 @@ class HardViewController: UIViewController {
     @IBAction func HardTablesSwitch(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         if sender.selectedSegmentIndex == 0
         {
-            HardPlayerTable.alpha = 1
-            HardComputerTable.alpha = 0
+            UIView.animate(withDuration: 0.5) {
+                self.HardPlayerTable.alpha = 1
+                self.HardComputerTable.alpha = 0
+            }
         }
         else
         {
-            HardPlayerTable.alpha = 0
-            HardComputerTable.alpha = 1
+            UIView.animate(withDuration: 0.5) {
+                self.HardPlayerTable.alpha = 0
+                self.HardComputerTable.alpha = 1
+            }
         }
     }
     

@@ -172,13 +172,17 @@ class EasyViewController: UIViewController {
     @IBAction func easyTablesSwitch(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         if sender.selectedSegmentIndex == 0
         {
-            EasyPlayerTable.alpha = 1
-            EasyComputerTable.alpha = 0
+            UIView.animate(withDuration: 0.5) {
+                self.EasyPlayerTable.alpha = 1
+                self.EasyComputerTable.alpha = 0
+            }
         }
         else
         {
-            EasyComputerTable.alpha = 1
-            EasyPlayerTable.alpha = 0
+            UIView.animate(withDuration: 0.5) {
+                self.EasyPlayerTable.alpha = 0
+                self.EasyComputerTable.alpha = 1
+            }
         }
     }
     
